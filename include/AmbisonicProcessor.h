@@ -108,8 +108,7 @@ namespace spaudio {
      *  Please use AmbisonicRotator instead.
      */
 
-    class SPAUDIO_API
-        [[deprecated("This class is deprecated. Please use AmbisonicRotator class instead.")]]
+    class SPAUDIO_API SPAUDIO_DEPRECATED("This class is deprecated. Please use AmbisonicRotator class instead.")
     AmbisonicProcessor : public AmbisonicBase
     {
     public:

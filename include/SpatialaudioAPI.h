@@ -35,4 +35,12 @@
 # define SPAUDIO_API SPATIALAUDIO_IMPORT
 #endif
 
+#if defined(__GNUC__)
+# define SPAUDIO_DEPRECATED(msg) __attribute__((deprecated(msg)))
+#elif defined(_MSC_VER)
+# define SPAUDIO_DEPRECATED(msg) __declspec(deprecated(msg))
+#else
+# define SPAUDIO_DEPRECATED(msg) [[deprecated(msg)]]
+#endif
+
 #endif /* SPATIALAUDIO_API_H */
